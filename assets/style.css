@@ -1,0 +1,632 @@
+:root {
+  --flower-color: #ff8080;
+  --swirl-color: #95d2b3;
+  --spiral-color: #f9b572;
+}
+* {
+  box-sizing: border-box;
+}
+@import url("https://use.typekit.net/hka0lre.css");
+
+@font-face {
+  font-family: "Ademola";
+  src: url(fonts/AdeDisplay.otf) format("opentype");
+}
+html {
+  overflow-x: hidden;
+}
+
+/* ******************************************************************************************************************************************
+                                                        INDEX PAGE
+****************************************************************************************************************************************** 
+   */
+
+.body {
+  overflow: hidden;
+  background: black;
+}
+
+.bigButton {
+  height: 50vh;
+}
+
+#myName {
+  color: white;
+  margin-top: 17%;
+  margin-left: 17%;
+}
+
+#myName p {
+  font-family: "New Order", sans-serif;
+  font-size: clamp(1rem, 2vw, 1.4rem);
+  font-weight: 100;
+  margin-bottom: 5px;
+}
+
+#myName h1 {
+  font-family: "Ademola";
+  font-size: 4.5rem;
+  font-size: clamp(2rem, 5vw, 4.5rem);
+  line-height: 1;
+  font-weight: 500;
+}
+
+#myselfCard:hover {
+  background: var(--swirl-color);
+}
+#workCard:hover {
+  background: var(--flower-color);
+}
+#skillsCard:hover {
+  background: var(--spiral-color);
+}
+
+.focus {
+  fill: black;
+}
+
+@keyframes spinRotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+.gira {
+  animation: spinRotation;
+  transform-origin: 50% 50%;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.linkContainer {
+  margin-top: 50px !important;
+  text-align: center;
+}
+
+.link {
+  text-decoration: none;
+  font-family: "Ademola";
+  color: black;
+  font-size: clamp(2rem, 5vw, 4.5rem);
+  font-weight: 400;
+}
+
+.link:hover {
+  transition: 0.1s;
+  color: white;
+}
+
+@media screen and (max-width: 991px) {
+  #myName {
+    margin-top: 30%;
+  }
+}
+@media screen and (max-width: 761px) {
+  .col-12 {
+    border: 1px solid white;
+  }
+  .col-12 svg {
+    width: 40px;
+    height: 40px;
+  }
+  .linkContainer {
+    margin-top: 30px !important;
+  }
+}
+
+/* ******************************************************************************************************************************************
+                                                        WORK PAGE
+****************************************************************************************************************************************** 
+   */
+
+.goBack {
+  font-family: Ademola;
+  font-size: 2rem;
+  font-weight: 100;
+  display: inline;
+  text-decoration: none;
+  color: black;
+}
+
+.goBack,
+.goBackIcon {
+  vertical-align: middle;
+}
+
+@keyframes runningStrisciaBack {
+  0% {
+    transform: translateX(-10%);
+  }
+  50% {
+    transform: translateX(-5%);
+  }
+  100% {
+    transform: translateX(-10%);
+  }
+}
+
+.backContainer {
+  white-space: nowrap;
+  position: relative;
+  display: block;
+  width: 100%;
+  animation: runningStrisciaBack 5s linear infinite;
+}
+
+.goBackIcon {
+  animation: spinRotation 5s linear infinite;
+  transform-origin: 50% 50%;
+}
+
+.backContainer:hover,
+.backContainer:hover .goBack,
+.backContainer:hover .goBackIcon {
+  color: white;
+  animation: none;
+  fill: white;
+  cursor: pointer;
+}
+
+#wrkTitle {
+  text-align: center;
+  margin-top: 5vh;
+  font-family: "Ademola";
+  font-weight: 600;
+}
+#wrkTitle h2 {
+  font-size: clamp(3rem, 30vw, 29rem);
+  color: black;
+}
+
+#wrkSubTitle {
+  text-align: center;
+  margin-top: -30px;
+}
+#wrkSubTitle p {
+  color: black;
+  font-family: "New Order", sans-serif;
+  font-weight: 300;
+  font-size: clamp(0.1rem, 5vw, 2rem);
+}
+
+#scroll {
+  text-align: center;
+  margin-top: 10vh;
+}
+
+#scroll p {
+  color: black;
+  font-family: "New Order", sans-serif;
+  font-weight: 800;
+}
+
+#wrkVertical {
+  text-align: center;
+  display: none;
+}
+
+#wrkVertical > .row + .row > .col {
+  margin-top: -5vh;
+}
+
+#wrkVertical p {
+  font-size: 9rem;
+  font-family: "Ademola";
+  font-weight: 500;
+}
+
+@media screen and (max-width: 761px) {
+  #wrkSubTitle {
+    margin-top: 10vh;
+  }
+  #scroll {
+    margin-top: 10vh;
+  }
+  #wrkTitle {
+    display: none;
+  }
+  #wrkVertical {
+    display: block;
+  }
+  #scroll {
+    margin-top: 50px;
+  }
+  #wrkSubTitle {
+    margin-top: 0;
+  }
+}
+
+.contenitore {
+  clip: rect(0, auto, auto, 0);
+  overflow: hidden;
+  position: absolute;
+  height: 100vh;
+  left: 0;
+  width: 100%;
+  /* safari hack */
+  -webkit-mask-image: -webkit-linear-gradient(top, #ffffff 0%, #ffffff 100%);
+}
+
+.contenitore + .container {
+  height: 100vh;
+}
+
+.title_wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.title_wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.container_image {
+  background: black;
+  font-family: "New Order", sans-serif;
+  background-size: 100vw auto;
+  background-position: center;
+  background-attachment: fixed;
+  top: 110vh;
+}
+
+.container_image2 {
+  background: black;
+  background-size: cover;
+  top: 210vh;
+}
+
+.container_image3 {
+  background: black;
+  background-size: cover;
+  top: 310vh;
+}
+
+/* ******************************************************************************************************************************************
+                                                        MYSELF PAGE
+****************************************************************************************************************************************** 
+   */
+
+.marquee {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.marquee-content {
+  display: inline-block;
+  transform: translateX(-10%);
+  animation: marqueeAnim 35s linear infinite;
+}
+
+.slideText {
+  font-size: 9rem;
+  line-height: 9rem;
+  font-family: "Ademola";
+  color: black;
+  display: inline-block;
+}
+
+.slideText svg {
+  margin-left: -4vw;
+  margin-top: -40px;
+}
+
+@media screen and (max-width: 761px) {
+  .slideText svg {
+    margin-left: -9vw;
+  }
+}
+
+.miniMarquee-content {
+  display: inline-block;
+  transform: translateX(-10%);
+  animation: miniMarqueeAnim 14s linear infinite;
+}
+
+.miniSlide {
+  font-size: 2rem;
+  line-height: 2rem;
+  font-family: "Ademola";
+  color: black;
+  display: inline-block;
+}
+
+.miniSlide svg {
+  margin-left: -0.5vw;
+  margin-top: -8px;
+}
+
+.northernContent {
+  animation: marqueeAnim2 29s linear infinite;
+}
+.parisMini {
+  animation: miniMarqueeAnim2 16s linear infinite;
+}
+
+.openContent {
+  animation: marqueeAnim3 20s linear infinite;
+}
+
+.workTogetherMini {
+  animation: miniMarqueeAnim3 16s linear infinite;
+}
+
+.mailContent {
+  animation: marqueeAnimMail 16s linear infinite;
+}
+
+.slideTextMail {
+  font-size: 15rem;
+  line-height: 15rem;
+  font-family: "Ademola";
+  color: black;
+  display: inline-block;
+}
+
+.slideTextMail svg {
+  margin-left: -4vw;
+  margin-top: -55px;
+}
+
+.mailContent a {
+  text-decoration: none;
+  color: black;
+}
+
+.mailContent:hover .slideTextMail a,
+.mailContent:hover .slideTextMail .goBackIcon {
+  color: white;
+  fill: white;
+}
+
+@keyframes marqueeAnim {
+  0% {
+    transform: translateX(0%);
+  }
+  50% {
+    transform: translateX(-70%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+@keyframes marqueeAnim2 {
+  0% {
+    transform: translateX(-50%);
+  }
+  50% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+@keyframes marqueeAnim3 {
+  0% {
+    transform: translateX(0%);
+  }
+  50% {
+    transform: translateX(-30%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+@keyframes marqueeAnimMail {
+  0% {
+    transform: translateX(0%);
+  }
+  50% {
+    transform: translateX(-40%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes miniMarqueeAnim {
+  0% {
+    transform: translateX(-20%);
+  }
+  50% {
+    transform: translateX(-40%);
+  }
+  100% {
+    transform: translateX(-20%);
+  }
+}
+@keyframes miniMarqueeAnim2 {
+  0% {
+    transform: translateX(0%);
+  }
+  50% {
+    transform: translateX(-40%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+@keyframes miniMarqueeAnim3 {
+  0% {
+    transform: translateX(-10%);
+  }
+  50% {
+    transform: translateX(-30%);
+  }
+  100% {
+    transform: translateX(-10%);
+  }
+}
+
+@media screen and (max-width: 761px) {
+  .marquee-content {
+    animation-duration: 70s;
+  }
+
+  .miniMarquee-content {
+    animation-duration: 28s;
+  }
+
+  .northernContent {
+    animation-duration: 58s;
+  }
+
+  .parisMini {
+    animation-duration: 32s;
+  }
+
+  .openContent {
+    animation-duration: 40s;
+  }
+
+  .workTogetherMini {
+    animation-duration: 32s;
+  }
+
+  .mailContent {
+    animation-duration: 32s;
+  }
+
+  .slideTextMail {
+    margin-top: 60px;
+  }
+}
+
+/* ******************************************************************************************************************************************
+                                                        SKILLS PAGE
+****************************************************************************************************************************************** 
+   */
+
+#hacker {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  max-width: 20%;
+  height: auto;
+}
+
+#testoProva {
+  position: absolute;
+  z-index: 1;
+  top: 38%;
+  left: 8%;
+  text-align: center;
+}
+
+#testoProva p {
+  color: black;
+  font-family: "Ademola";
+  font-weight: 500;
+  font-size: clamp(2.7rem, 5vw, 6rem);
+}
+
+#testoProva p + p,
+#testoProva a {
+  font-size: 1rem;
+  text-decoration: none;
+  color: black;
+  font-family: "New Order", sans-serif;
+  font-weight: 500;
+  transition: 0.1s;
+}
+
+#testoProva a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.draggable {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background-size: cover;
+  display: flex;
+  cursor: grab;
+  user-select: none;
+  z-index: 50;
+}
+
+.draggable:nth-of-type(2) {
+  background-image: url(img/html-logo.png);
+}
+.draggable:nth-of-type(3) {
+  background-image: url(img/css-logo.png);
+}
+.draggable:nth-of-type(4) {
+  background-image: url(img/js-logo.png);
+}
+.draggable:nth-of-type(5) {
+  background-image: url(img/bootstrap-logo.png);
+}
+.draggable:nth-of-type(6) {
+  background-image: url(img/git-logo.png);
+}
+.draggable:nth-of-type(7) {
+  background-image: url(img/php-logo.png);
+}
+.draggable:nth-of-type(8) {
+  background-image: url(img/wp-logo.png);
+}
+.draggable:nth-of-type(9) {
+  background-image: url(img/figma-logo.png);
+}
+
+@media screen and (max-width: 761px) {
+  #testoProva {
+    left: 0;
+  }
+  .draggable {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/* ******************************************************************************************************************************************
+                                                        404 PAGE
+****************************************************************************************************************************************** 
+   */
+
+#provolone {
+  background-image: url(img/404.gif);
+  height: 100vh;
+  width: auto;
+}
+
+#backHome404 {
+  text-decoration: none;
+  color: white;
+  font-family: "new order", sans-serif;
+  font-size: 2rem;
+border: 2px solid black;
+  padding: 10px;
+  border-radius: 15px;
+  position: absolute;
+  top: 70%;
+  left:45%;
+  transition: 0.2s;
+}
+
+#backHome404:hover{
+  color: black;
+  background: white;
+}
+
+@media screen and (max-width:761px) {
+#backHome404{
+  left: 27%;
+}
+}
