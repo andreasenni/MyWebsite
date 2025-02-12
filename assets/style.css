@@ -21,58 +21,66 @@ html {
 ****************************************************************************************************************************************** 
    */
 
-.body {
-  overflow: hidden;
-  background: black;
-}
-
-.bigButton {
-  height: 50vh;
-}
-
-#myNameCard {
-  border-bottom: 1px solid white;
-  border-right: 1px solid white;
-}
-#myselfCard {
-  border-bottom: 1px solid white;
-  border-left: 1px solid white;
-}
-#workCard {
-  border-top: 1px solid white;
-  border-right: 1px solid white;
-}
-#skillsCard {
-  border-top: 1px solid white;
-  border-left: 1px solid white;
-}
-
-#myName {
+#greetings {
   color: white;
+  text-align: center;
+  margin-top: 10%;
 }
 
-#myName p {
+#greetings p {
   font-family: "New Order", sans-serif;
   font-size: clamp(1rem, 2vw, 1.4rem);
   font-weight: 100;
-  margin-bottom: 5px;
 }
 
-#myName h1 {
+#greetings h1 {
   font-family: "Ademola";
   font-size: 4.5rem;
-  font-size: clamp(2rem, 5vw, 4.5rem);
+  font-size: clamp(3rem, 5vw, 4.5rem);
   line-height: 1;
   font-weight: 500;
 }
 
-#myselfCard:hover {
+.linkHolder {
+  text-align: center;
+  margin-top: 7% !important;
+}
+
+.linkHolder a {
+  font-family: "Ademola";
+  text-decoration: none;
+  color: black;
+  font-size: clamp(2rem, 20vw, 4.5rem);
+  transition: 0.2s;
+}
+
+.linkHolder a:hover {
+  color: white;
+}
+
+#myselfSection {
+  border-bottom: 1px solid white;
+  border-left: 1px solid white;
+  height: 50vh;
+}
+#workSection {
+  border-top: 1px solid white;
+  border-right: 1px solid white;
+  height: 50vh;
+}
+#skillsSection {
+  border-top: 1px solid white;
+  border-left: 1px solid white;
+  height: 50vh;
+}
+
+#myselfSection:hover {
   background: var(--swirl-color);
 }
-#workCard:hover {
+#workSection:hover {
   background: var(--flower-color);
 }
-#skillsCard:hover {
+#skillsSection:hover {
   background: var(--spiral-color);
 }
 
@@ -88,7 +96,6 @@ html {
     transform: rotate(-360deg);
   }
 }
-
 .gira {
   animation: spinRotation;
   transform-origin: 50% 50%;
@@ -97,54 +104,35 @@ html {
   animation-timing-function: linear;
 }
 
-.linkContainer {
-  min-height: 150px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-.link {
-  text-decoration: none;
-  font-family: "Ademola";
-  color: black;
-  font-size: clamp(2rem, 5vw, 4.5rem);
-  font-weight: 400;
-}
-
-.link:hover {
-  transition: 0.1s;
-  color: white;
-}
-
 @media screen and (max-width: 761px) {
-  .col-12 {
-    height: 25vh;
+  #myselfSection,
+  #workSection,
+  #skillsSection {
+    height: 30vh;
   }
-  .col-12 svg {
-    width: 40px;
-    height: 40px;
+  #myselfSection {
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    border-left: none;
   }
-  #myNameCard {
+  #workSection {
+    border-top: 1px solid white;
     border-bottom: 1px solid white;
     border-right: none;
   }
-  #myselfCard {
+  #myselfSection {
+    border-top: 1px solid white;
     border-bottom: 1px solid white;
+    border-left: none;
+  }
+  #skillsSection {
     border-top: 1px solid white;
     border-left: none;
   }
-  #workCard {
-    border-bottom: 1px solid white;
-    border-top: 1px solid white;
-    border-right: none;
-  }
-  #skillsCard {
-    border-top: 1px solid white;
-    border-left: none;
+  .linkHolder {
+    margin-top: 5% !important;
   }
 }
-
 /* ******************************************************************************************************************************************
                                                         WORK PAGE
 ****************************************************************************************************************************************** 
@@ -327,16 +315,42 @@ html {
 ****************************************************************************************************************************************** 
    */
 
-.marquee {
-  overflow: hidden;
-  white-space: nowrap;
-  width: 100%;
-}
-
 .marquee-content {
   display: inline-block;
   transform: translateX(-10%);
   animation: marqueeAnim 35s linear infinite;
+}
+
+.northernContent {
+  animation: marqueeAnim2 29s linear infinite;
+}
+
+.openContent {
+  animation: marqueeAnim3 20s linear infinite;
+}
+
+.mailContent {
+  animation: marqueeAnimMail 16s linear infinite;
+}
+
+.miniMarquee-content {
+  display: inline-block;
+  transform: translateX(-10%);
+  animation: miniMarqueeAnim 14s linear infinite;
+}
+
+.parisMini {
+  animation: miniMarqueeAnim2 16s linear infinite;
+}
+
+.workTogetherMini {
+  animation: miniMarqueeAnim3 16s linear infinite;
+}
+
+.marquee {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
 }
 
 .slideText {
@@ -358,12 +372,6 @@ html {
   }
 }
 
-.miniMarquee-content {
-  display: inline-block;
-  transform: translateX(-10%);
-  animation: miniMarqueeAnim 14s linear infinite;
-}
-
 .miniSlide {
   font-size: 2rem;
   line-height: 2rem;
@@ -375,25 +383,6 @@ html {
 .miniSlide svg {
   margin-left: -0.5vw;
   margin-top: -8px;
-}
-
-.northernContent {
-  animation: marqueeAnim2 29s linear infinite;
-}
-.parisMini {
-  animation: miniMarqueeAnim2 16s linear infinite;
-}
-
-.openContent {
-  animation: marqueeAnim3 20s linear infinite;
-}
-
-.workTogetherMini {
-  animation: miniMarqueeAnim3 16s linear infinite;
-}
-
-.mailContent {
-  animation: marqueeAnimMail 16s linear infinite;
 }
 
 .slideTextMail {
@@ -420,6 +409,7 @@ html {
   fill: white;
 }
 
+/* Desktop */
 @keyframes marqueeAnim {
   0% {
     transform: translateX(0%);
@@ -431,6 +421,7 @@ html {
     transform: translateX(0%);
   }
 }
+
 @keyframes marqueeAnim2 {
   0% {
     transform: translateX(-50%);
@@ -442,6 +433,7 @@ html {
     transform: translateX(-50%);
   }
 }
+
 @keyframes marqueeAnim3 {
   0% {
     transform: translateX(0%);
@@ -453,6 +445,7 @@ html {
     transform: translateX(0%);
   }
 }
+
 @keyframes marqueeAnimMail {
   0% {
     transform: translateX(0%);
@@ -476,6 +469,7 @@ html {
     transform: translateX(-20%);
   }
 }
+
 @keyframes miniMarqueeAnim2 {
   0% {
     transform: translateX(0%);
@@ -487,6 +481,7 @@ html {
     transform: translateX(0%);
   }
 }
+
 @keyframes miniMarqueeAnim3 {
   0% {
     transform: translateX(-10%);
@@ -499,33 +494,125 @@ html {
   }
 }
 
+/* Mobile */
+@keyframes marqueeAnimMobile {
+  0% {
+    transform: translateX(0%);
+  }
+  50% {
+    transform: translateX(-90%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes marqueeAnim2Mobile {
+  0% {
+    transform: translateX(-70%);
+  }
+  50% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-70%);
+  }
+}
+
+@keyframes marqueeAnim3Mobile {
+  0% {
+    transform: translateX(0%);
+  }
+  50% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes marqueeAnimMailMobile {
+  0% {
+    transform: translateX(0%);
+  }
+  50% {
+    transform: translateX(-60%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes miniMarqueeAnimMobile {
+  0% {
+    transform: translateX(-10%);
+  }
+  50% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(-10%);
+  }
+}
+
+@keyframes miniMarqueeAnim2Mobile {
+  0% {
+    transform: translateX(0%);
+  }
+  50% {
+    transform: translateX(-60%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes miniMarqueeAnim3Mobile {
+  0% {
+    transform: translateX(-5%);
+  }
+  50% {
+    transform: translateX(-35%);
+  }
+  100% {
+    transform: translateX(-5%);
+  }
+}
+
 @media screen and (max-width: 761px) {
   .marquee-content {
-    animation-duration: 70s;
-  }
-
-  .miniMarquee-content {
-    animation-duration: 28s;
+    animation-name: marqueeAnimMobile;
+    animation-duration: 35s;
   }
 
   .northernContent {
-    animation-duration: 58s;
-  }
-
-  .parisMini {
-    animation-duration: 32s;
+    animation-name: marqueeAnim2Mobile;
+    animation-duration: 29s;
   }
 
   .openContent {
-    animation-duration: 40s;
-  }
-
-  .workTogetherMini {
-    animation-duration: 32s;
+    animation-name: marqueeAnim3Mobile;
+    animation-duration: 20s;
   }
 
   .mailContent {
-    animation-duration: 32s;
+    animation-name: marqueeAnimMailMobile;
+    animation-duration: 16s;
+  }
+
+  .miniMarquee-content {
+    animation-name: miniMarqueeAnimMobile;
+    animation-duration: 14s;
+  }
+
+  .parisMini {
+    animation-name: miniMarqueeAnim2Mobile;
+    animation-duration: 16s;
+  }
+
+  .workTogetherMini {
+    animation-name: miniMarqueeAnim3Mobile;
+    animation-duration: 16s;
   }
 }
 

@@ -19,26 +19,22 @@
     />
     <script src="main.js" defer></script>
   </head>
-  <body class="body">
+
+  <body style="background: black; overflow-x: hidden;">
     <div class="container-fluid">
-      <div class="row bigButton">
-        <div
-          class="col-12 col-md-6 d-flex align-items-center justify-content-center"
-          id="myNameCard"
-        >
-          <div id="myName" style="text-align: center">
-            <p data-aos="fade-down">Hi, my name is Andrea and I'm a</p>
-            <h1 data-aos="fade-right">FRONT END DEVELOPER</h1>
+      <div class="row">
+        <div class="col" style="height: 30vh">
+          <div class="row">
+            <div class="col" id="greetings">
+              <p>Hi, my name is Andrea and I'm a</p>
+              <h1>FRONT END DEVELOPER</h1>
+            </div>
           </div>
         </div>
-
-        <div
-          class="col-12 col-md-6"
-          id="myselfCard"
-        >
+        <div class="col"id="myselfSection">
           <div class="row">
-            <div class="col" style="margin-top: 10px">
-              <?xml version="1.0" encoding="UTF-8"?><svg
+            <div class="col">
+              <svg
                 class="prova"
                 xmlns="http://www.w3.org/2000/svg"
                 width="96"
@@ -55,23 +51,18 @@
             </div>
           </div>
           <div class="row">
-            <div
-              class="col linkContainer d-flex align-items-center justify-content-center"
-            >
-              <a class="link" href="myself.html">MYSELF</a>
+            <div class="col linkHolder">
+              <a href="myself.html">MYSELF</a>
             </div>
           </div>
         </div>
       </div>
-
-      <div class="row bigButton">
-        <div
-          class="col-12 col-md-6"
-          id="workCard"
-        >
+      <div class="row">
+        <div class="col"id="workSection">
           <div class="row">
             <div class="col">
-              <?xml version="1.0" encoding="UTF-8"?><svg
+              <svg
+                class="prova"
                 xmlns="http://www.w3.org/2000/svg"
                 width="96"
                 height="96"
@@ -87,20 +78,16 @@
             </div>
           </div>
           <div class="row">
-            <div
-              class="col linkContainer d-flex align-items-center justify-content-center"
-            >
-              <a class="link" href="work.html">WORK</a>
+            <div class="col linkHolder">
+              <a href="work.html">WORK</a>
             </div>
           </div>
         </div>
-        <div
-          class="col-12 col-md-6"
-          id="skillsCard"
-        >
+        <div class="col"id="skillsSection">
           <div class="row">
             <div class="col">
-              <?xml version="1.0" encoding="UTF-8"?><svg
+              <svg
+                class="prova"
                 xmlns="http://www.w3.org/2000/svg"
                 width="96"
                 height="96"
@@ -116,24 +103,23 @@
             </div>
           </div>
           <div class="row">
-            <div
-              class="col linkContainer d-flex align-items-center justify-content-center"
-            >
-              <a class="link" href="skills.html">SKILLS</a>
+            <div class="col linkHolder">
+              <a href="skills.html">SKILLS</a>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-      defer
-    ></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
   </body>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"
+    defer
+  ></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </html>

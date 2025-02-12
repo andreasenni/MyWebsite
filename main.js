@@ -1,40 +1,40 @@
-let myName = document.getElementById("myName");
+let greetings = document.getElementById("greetings");
 
-let myselfCard = document.getElementById("myselfCard");
+let myselfSection = document.getElementById("myselfSection");
 let myselfLogo = document.getElementById("myselfLogo");
-myselfCard.addEventListener("mouseenter", function () {
+myselfSection.addEventListener("mouseenter", function () {
   myselfLogo.classList.add("focus");
   myselfLogo.classList.add("gira");
-  myName.style.opacity = "0";
+  greetings.style.opacity = "0";
 });
-myselfCard.addEventListener("mouseleave", function () {
+myselfSection.addEventListener("mouseleave", function () {
   myselfLogo.classList.remove("focus");
   myselfLogo.classList.remove("gira");
-  myName.style.opacity = "1";
+  greetings.style.opacity = "1";
 });
 
-let workCard = document.getElementById("workCard");
+let workSection = document.getElementById("workSection");
 let workLogo = document.getElementById("workLogo");
-workCard.addEventListener("mouseenter", function () {
+workSection.addEventListener("mouseenter", function () {
   workLogo.classList.add("focus");
   workLogo.classList.add("gira");
-  myName.style.opacity = "0";
+  greetings.style.opacity = "0";
 });
-workCard.addEventListener("mouseleave", function () {
+workSection.addEventListener("mouseleave", function () {
   workLogo.classList.remove("focus");
   workLogo.classList.remove("gira");
-  myName.style.opacity = "1";
+  greetings.style.opacity = "1";
 });
 
-let skillsCard = document.getElementById("skillsCard");
+let skillsSection = document.getElementById("skillsSection");
 let skillsLogo = document.getElementById("skillsLogo");
-skillsCard.addEventListener("mouseenter", function () {
+skillsSection.addEventListener("mouseenter", function () {
   skillsLogo.classList.add("focus");
   skillsLogo.classList.add("gira");
-  myName.style.opacity = "0";
+  greetings.style.opacity = "0";
 });
-skillsCard.addEventListener("mouseleave", function () {
+skillsSection.addEventListener("mouseleave", function () {
   skillsLogo.classList.remove("focus");
   skillsLogo.classList.remove("gira");
-  myName.style.opacity = "1";
+  greetings.style.opacity = "1";
 });
