@@ -32,7 +32,7 @@ html {
 
 #myName {
   color: white;
-  margin-top: 17%;
+  margin-top: 13%;
   margin-left: 17%;
 }
 
@@ -87,6 +87,10 @@ html {
   text-align: center;
 }
 
+.linkContainer:nth-child(1){
+  margin-top: 30px !important;
+}
+
 .link {
   text-decoration: none;
   font-family: "Ademola";
@@ -102,7 +106,9 @@ html {
 
 @media screen and (max-width: 991px) {
   #myName {
-    margin-top: 30%;
+    margin-top: 18%;
+    margin-left: 25%;
+
   }
 }
 @media screen and (max-width: 761px) {
@@ -112,9 +118,6 @@ html {
   .col-12 svg {
     width: 40px;
     height: 40px;
-  }
-  .linkContainer {
-    margin-top: 30px !important;
   }
 }
 
@@ -173,7 +176,7 @@ html {
 
 #wrkTitle {
   text-align: center;
-  margin-top: 5vh;
+  margin-top: 1vh;
   font-family: "Ademola";
   font-weight: 600;
 }
@@ -184,7 +187,7 @@ html {
 
 #wrkSubTitle {
   text-align: center;
-  margin-top: -30px;
+  margin-top: -70px;
 }
 #wrkSubTitle p {
   color: black;
@@ -195,7 +198,7 @@ html {
 
 #scroll {
   text-align: center;
-  margin-top: 10vh;
+  margin-top: 5vh;
 }
 
 #scroll p {
@@ -500,10 +503,6 @@ html {
   .mailContent {
     animation-duration: 32s;
   }
-
-  .slideTextMail {
-    margin-top: 60px;
-  }
 }
 
 /* ******************************************************************************************************************************************
@@ -608,25 +607,25 @@ html {
 
 #backHome404 {
   text-decoration: none;
-  color: white;
+  color: black;
+  background: white;
   font-family: "new order", sans-serif;
   font-size: 2rem;
-border: 2px solid black;
+  border: 2px solid black;
   padding: 10px;
   border-radius: 15px;
   position: absolute;
   top: 70%;
-  left:45%;
-  transition: 0.2s;
+  left: 45%;
 }
 
-#backHome404:hover{
-  color: black;
-  background: white;
-}
-
-@media screen and (max-width:761px) {
-#backHome404{
-  left: 27%;
-}
+@media screen and (max-width: 761px) {
+  #backHome404 {
+    left: 27%;
+  }
+  #provolone {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: -200px;
+  }
 }
