@@ -30,10 +30,25 @@ html {
   height: 50vh;
 }
 
+#myNameCard {
+  border-bottom: 1px solid white;
+  border-right: 1px solid white;
+}
+#myselfCard {
+  border-bottom: 1px solid white;
+  border-left: 1px solid white;
+}
+#workCard {
+  border-top: 1px solid white;
+  border-right: 1px solid white;
+}
+#skillsCard {
+  border-top: 1px solid white;
+  border-left: 1px solid white;
+}
+
 #myName {
   color: white;
-  margin-top: 13%;
-  margin-left: 17%;
 }
 
 #myName p {
@@ -83,14 +98,12 @@ html {
 }
 
 .linkContainer {
-  margin-top: 50px !important;
+  min-height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
 }
-
-.linkContainer:nth-child(1){
-  margin-top: 30px !important;
-}
-
 .link {
   text-decoration: none;
   font-family: "Ademola";
@@ -104,20 +117,31 @@ html {
   color: white;
 }
 
-@media screen and (max-width: 991px) {
-  #myName {
-    margin-top: 18%;
-    margin-left: 25%;
-
-  }
-}
 @media screen and (max-width: 761px) {
   .col-12 {
-    border: 1px solid white;
+    height: 25vh;
   }
   .col-12 svg {
     width: 40px;
     height: 40px;
+  }
+  #myNameCard {
+    border-bottom: 1px solid white;
+    border-right: none;
+  }
+  #myselfCard {
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+    border-left: none;
+  }
+  #workCard {
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+    border-right: none;
+  }
+  #skillsCard {
+    border-top: 1px solid white;
+    border-left: none;
   }
 }
 

@@ -47,20 +47,22 @@ draggables.forEach((draggable) => {
 
   document.addEventListener("touchmove", (e) => {
     if (!isDragging) return;
+    e.preventDefault(); // Impedisce lo scroll della pagina durante il drag
+  
     const touch = e.touches[0];
-
     let newX = touch.clientX - offsetX;
     let newY = touch.clientY - offsetY;
-
+  
     const maxX = window.innerWidth - draggable.offsetWidth;
     const maxY = window.innerHeight - draggable.offsetHeight;
-
+  
     newX = Math.max(0, Math.min(newX, maxX));
     newY = Math.max(0, Math.min(newY, maxY));
-
+  
     draggable.style.left = `${newX}px`;
     draggable.style.top = `${newY}px`;
-  });
+  }, { passive: false });
+  
 
   document.addEventListener("touchend", () => {
     isDragging = false;
