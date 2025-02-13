@@ -11,6 +11,7 @@
 @font-face {
   font-family: "Ademola";
   src: url(fonts/AdeDisplay.otf) format("opentype");
+  font-display: swap;
 }
 html {
   overflow-x: hidden;
@@ -104,6 +105,11 @@ html {
   animation-timing-function: linear;
 }
 
+.prova {
+  width: 96px;
+  height: 96px;
+}
+
 @media screen and (max-width: 761px) {
   #myselfSection,
   #workSection,
@@ -129,8 +135,10 @@ html {
     border-top: 1px solid white;
     border-left: none;
   }
-  .linkHolder {
-    margin-top: 5% !important;
+
+  .prova {
+    width: 40px;
+    height: 40px;
   }
 }
 /* ******************************************************************************************************************************************
@@ -219,21 +227,6 @@ html {
   font-weight: 800;
 }
 
-#wrkVertical {
-  text-align: center;
-  display: none;
-}
-
-#wrkVertical > .row + .row > .col {
-  margin-top: -5vh;
-}
-
-#wrkVertical p {
-  font-size: 9rem;
-  font-family: "Ademola";
-  font-weight: 500;
-}
-
 @media screen and (max-width: 761px) {
   #wrkSubTitle {
     margin-top: 10vh;
@@ -242,10 +235,7 @@ html {
     margin-top: 10vh;
   }
   #wrkTitle {
-    display: none;
-  }
-  #wrkVertical {
-    display: block;
+    margin-top: 30vh;
   }
   #scroll {
     margin-top: 50px;
@@ -319,32 +309,39 @@ html {
   display: inline-block;
   transform: translateX(-10%);
   animation: marqueeAnim 35s linear infinite;
+  will-change: transform;
 }
 
 .northernContent {
   animation: marqueeAnim2 29s linear infinite;
+  will-change: transform;
 }
 
 .openContent {
   animation: marqueeAnim3 20s linear infinite;
+  will-change: transform;
 }
 
 .mailContent {
   animation: marqueeAnimMail 16s linear infinite;
+  will-change: transform;
 }
 
 .miniMarquee-content {
   display: inline-block;
   transform: translateX(-10%);
   animation: miniMarqueeAnim 14s linear infinite;
+  will-change: transform;
 }
 
 .parisMini {
   animation: miniMarqueeAnim2 16s linear infinite;
+  will-change: transform;
 }
 
 .workTogetherMini {
   animation: miniMarqueeAnim3 16s linear infinite;
+  will-change: transform;
 }
 
 .marquee {
